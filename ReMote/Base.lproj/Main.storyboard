@@ -1,25 +1,157 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3KF-fj-om1">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Title-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ReMote" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
-                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                        <viewControllerLayoutGuide type="top" id="MgU-KY-6Bt"/>
+                        <viewControllerLayoutGuide type="bottom" id="gWk-wh-Ty9"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P2j-3Z-NL0">
+                                <rect key="frame" x="8" y="76" width="235" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="dLk-YK-F6Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="TalkToMe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s51-jg-cKe">
+                                <rect key="frame" x="44" y="24" width="233" height="44"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbs-VV-W2c">
+                                <rect key="frame" x="16" y="38" width="35" height="30"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="3KF-fj-om1" kind="custom" id="OvV-eJ-BMM"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMg-Sp-IJP">
+                                <rect key="frame" x="8" y="114" width="304" height="440"/>
+                                <color key="backgroundColor" red="0.48863981815261015" green="0.79570080774731833" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="TD3-OO-0u6"/>
+                                </connections>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCd-bg-YnF">
+                                <rect key="frame" x="251" y="81" width="61" height="25"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
+                                <state key="normal" title="Talk!">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendMessage:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="wDh-fw-7iS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45720094319999999" green="0.61994069519999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="LMg-Sp-IJP" firstAttribute="trailing" secondItem="RCd-bg-YnF" secondAttribute="trailing" id="3Tp-tb-wtk"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RCd-bg-YnF" secondAttribute="trailing" constant="-8" id="9QT-45-Ukf"/>
+                            <constraint firstItem="P2j-3Z-NL0" firstAttribute="centerY" secondItem="RCd-bg-YnF" secondAttribute="centerY" constant="-2.5" id="9XK-mg-TVu"/>
+                            <constraint firstItem="LMg-Sp-IJP" firstAttribute="leading" secondItem="P2j-3Z-NL0" secondAttribute="leading" id="Bzw-IY-EVZ"/>
+                            <constraint firstAttribute="centerY" secondItem="LMg-Sp-IJP" secondAttribute="centerY" constant="-57" id="Daa-wO-0uT"/>
+                            <constraint firstItem="RCd-bg-YnF" firstAttribute="leading" secondItem="P2j-3Z-NL0" secondAttribute="trailing" constant="8" id="Nit-qT-jb3"/>
+                            <constraint firstAttribute="centerX" secondItem="LMg-Sp-IJP" secondAttribute="centerX" id="QAk-fH-4HF"/>
+                            <constraint firstItem="gbs-VV-W2c" firstAttribute="top" secondItem="MgU-KY-6Bt" secondAttribute="bottom" constant="18" id="Sd9-zC-aTC"/>
+                            <constraint firstItem="LMg-Sp-IJP" firstAttribute="top" secondItem="P2j-3Z-NL0" secondAttribute="bottom" constant="8" id="Utj-lI-183"/>
+                            <constraint firstItem="gbs-VV-W2c" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="afV-Em-Qwr"/>
+                            <constraint firstAttribute="centerX" secondItem="s51-jg-cKe" secondAttribute="centerX" constant="-0.5" id="l1s-Ef-yet"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Title" id="Odw-Ji-qUd"/>
+                    <connections>
+                        <outlet property="message" destination="P2j-3Z-NL0" id="8sd-9q-P6l"/>
+                        <outlet property="messageText" destination="LMg-Sp-IJP" id="T9w-Mu-9e0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="476" y="345"/>
+        </scene>
+        <!--Title View Controller-->
+        <scene sceneID="iWc-Ue-8cb">
+            <objects>
+                <viewController id="3KF-fj-om1" customClass="TitleViewController" customModule="ReMote" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qIK-ar-TH9"/>
+                        <viewControllerLayoutGuide type="bottom" id="7FV-zh-HlU"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xtI-jM-uNS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FP-ht-nwB">
+                                <rect key="frame" x="106" y="317" width="108" height="46"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="46" id="F21-zP-SwG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="26"/>
+                                <state key="normal" title="Connect">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="vXZ-lx-hvc" kind="custom" id="biZ-op-X8y"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TalkToMe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rff-Ql-PHi">
+                                <rect key="frame" x="44" y="52" width="233" height="106"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="61"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name?" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h6D-00-cqL">
+                                <rect key="frame" x="67" y="211" width="186" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="uH5-Cy-GoU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="0.45720094319999999" green="0.61994069519999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="2FP-ht-nwB" firstAttribute="centerX" secondItem="xtI-jM-uNS" secondAttribute="centerX" id="0wq-6t-Xyt"/>
+                            <constraint firstItem="h6D-00-cqL" firstAttribute="top" secondItem="rff-Ql-PHi" secondAttribute="bottom" constant="53" id="7lS-HX-Kfq"/>
+                            <constraint firstItem="7FV-zh-HlU" firstAttribute="top" secondItem="2FP-ht-nwB" secondAttribute="bottom" constant="205" id="A6J-nn-YSI"/>
+                            <constraint firstItem="2FP-ht-nwB" firstAttribute="leading" secondItem="xtI-jM-uNS" secondAttribute="leadingMargin" constant="90" id="AaC-hV-m3V"/>
+                            <constraint firstItem="2FP-ht-nwB" firstAttribute="top" secondItem="h6D-00-cqL" secondAttribute="bottom" constant="76" id="BCf-09-6As"/>
+                            <constraint firstItem="rff-Ql-PHi" firstAttribute="leading" secondItem="xtI-jM-uNS" secondAttribute="leadingMargin" constant="28" id="CvB-Sb-ANo"/>
+                            <constraint firstItem="h6D-00-cqL" firstAttribute="leading" secondItem="xtI-jM-uNS" secondAttribute="leadingMargin" constant="51" id="Eyf-nT-bOr"/>
+                            <constraint firstItem="rff-Ql-PHi" firstAttribute="centerX" secondItem="h6D-00-cqL" secondAttribute="centerX" id="coQ-NN-fZs"/>
+                            <constraint firstItem="rff-Ql-PHi" firstAttribute="top" secondItem="qIK-ar-TH9" secondAttribute="bottom" constant="32" id="oej-Qb-mHt"/>
+                            <constraint firstItem="2FP-ht-nwB" firstAttribute="centerX" secondItem="h6D-00-cqL" secondAttribute="centerX" id="zHj-ty-dtG"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="username" destination="h6D-00-cqL" id="1Gx-dh-4aZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WFY-bW-UAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="345"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
 </document>
