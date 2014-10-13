@@ -23,7 +23,7 @@ class ViewController: UIViewController, NSStreamDelegate, UITextViewDelegate
   var input : NSInputStream?
   var output : NSOutputStream?
   var messages : NSMutableString = ""
-  
+  var serverHadError  = false
 
   @IBOutlet var messageText: UITextView!
 
@@ -37,7 +37,6 @@ class ViewController: UIViewController, NSStreamDelegate, UITextViewDelegate
 
   
   func connect() {
-    println("Connecting")
     var readStream:  Unmanaged<CFReadStream>?
     var writeStream: Unmanaged<CFWriteStream>?
     
@@ -95,25 +94,34 @@ class ViewController: UIViewController, NSStreamDelegate, UITextViewDelegate
       break
       
     case NSStreamEvent.ErrorOccurred:
-      println("Error!")
+      self.serverHadError = true
       break
     
     case NSStreamEvent.EndEncountered:
+      self.serverHadError = true
+      performSegueWithIdentifier("BackToConnection", sender: self)
+      
       break
     
     default:
       break
-    
       
     }
     
+  }
+  override func viewDidAppear(animated: Bool) {
+    if(self.serverHadError) {
+      performSegueWithIdentifier("BackToConnection", sender: self)
+    }
+    
+  
   }
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
-
     
+  
 
 
   }
@@ -127,6 +135,10 @@ class ViewController: UIViewController, NSStreamDelegate, UITextViewDelegate
   
   
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    var dest = segue.destinationViewController as TitleViewController
+    
+    dest.hideServer = !self.serverHadError
+    
     self.input!.close()
     self.output!.close()
   }
@@ -137,8 +149,6 @@ class ViewController: UIViewController, NSStreamDelegate, UITextViewDelegate
   @IBAction func sendMessage(sender: AnyObject) {
 
     var messageString : NSMutableString = "msg>"
-    messageString.appendString(self.username)
-    messageString.appendString(": ")
     messageString.appendString(self.message.text)
     var rawString : NSData = messageString.dataUsingEncoding(NSASCIIStringEncoding)!
     

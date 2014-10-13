@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "33CE3E3819EAE01C000588C9"
-               BuildableName = "ReMote.app"
-               BlueprintName = "ReMote"
-               ReferencedContainer = "container:ReMote.xcodeproj">
+               BuildableName = "TalkToMe.app"
+               BlueprintName = "TalkToMe"
+               ReferencedContainer = "container:TalkToMe.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
          <BuildActionEntry
@@ -29,9 +29,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "33CE3E4D19EAE01D000588C9"
-               BuildableName = "ReMoteTests.xctest"
-               BlueprintName = "ReMoteTests"
-               ReferencedContainer = "container:ReMote.xcodeproj">
+               BuildableName = "TalkToMeTests.xctest"
+               BlueprintName = "TalkToMeTests"
+               ReferencedContainer = "container:TalkToMe.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -47,9 +47,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "33CE3E4D19EAE01D000588C9"
-               BuildableName = "ReMoteTests.xctest"
-               BlueprintName = "ReMoteTests"
-               ReferencedContainer = "container:ReMote.xcodeproj">
+               BuildableName = "TalkToMeTests.xctest"
+               BlueprintName = "TalkToMeTests"
+               ReferencedContainer = "container:TalkToMe.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -57,9 +57,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "33CE3E3819EAE01C000588C9"
-            BuildableName = "ReMote.app"
-            BlueprintName = "ReMote"
-            ReferencedContainer = "container:ReMote.xcodeproj">
+            BuildableName = "TalkToMe.app"
+            BlueprintName = "TalkToMe"
+            ReferencedContainer = "container:TalkToMe.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "33CE3E3819EAE01C000588C9"
-            BuildableName = "ReMote.app"
-            BlueprintName = "ReMote"
-            ReferencedContainer = "container:ReMote.xcodeproj">
+            BuildableName = "TalkToMe.app"
+            BlueprintName = "TalkToMe"
+            ReferencedContainer = "container:TalkToMe.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -94,9 +94,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "33CE3E3819EAE01C000588C9"
-            BuildableName = "ReMote.app"
-            BlueprintName = "ReMote"
-            ReferencedContainer = "container:ReMote.xcodeproj">
+            BuildableName = "TalkToMe.app"
+            BlueprintName = "TalkToMe"
+            ReferencedContainer = "container:TalkToMe.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

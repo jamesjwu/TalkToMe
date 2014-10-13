@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3340F5C519EC185000293CA4 /* talktomeServer.py in Resources */ = {isa = PBXBuildFile; fileRef = 3340F5C419EC185000293CA4 /* talktomeServer.py */; };
 		33CE3E3F19EAE01D000588C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CE3E3E19EAE01D000588C9 /* AppDelegate.swift */; };
 		33CE3E4119EAE01D000588C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CE3E4019EAE01D000588C9 /* ViewController.swift */; };
 		33CE3E4419EAE01D000588C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33CE3E4219EAE01D000588C9 /* Main.storyboard */; };
@@ -28,14 +29,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		33CE3E3919EAE01D000588C9 /* ReMote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReMote.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3340F5C419EC185000293CA4 /* talktomeServer.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = talktomeServer.py; sourceTree = "<group>"; };
+		33CE3E3919EAE01D000588C9 /* TalkToMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkToMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CE3E3D19EAE01D000588C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33CE3E3E19EAE01D000588C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33CE3E4019EAE01D000588C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		33CE3E4319EAE01D000588C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33CE3E4519EAE01D000588C9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		33CE3E4819EAE01D000588C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		33CE3E4E19EAE01D000588C9 /* ReMoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReMoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33CE3E4E19EAE01D000588C9 /* TalkToMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalkToMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CE3E5319EAE01D000588C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33CE3E5419EAE01D000588C9 /* ReMoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReMoteTests.swift; sourceTree = "<group>"; };
 		33D4139219EB17EB00C4F09A /* TitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
@@ -63,8 +65,8 @@
 		33CE3E3019EAE01C000588C9 = {
 			isa = PBXGroup;
 			children = (
-				33CE3E3B19EAE01D000588C9 /* ReMote */,
-				33CE3E5119EAE01D000588C9 /* ReMoteTests */,
+				33CE3E3B19EAE01D000588C9 /* TalkToMe */,
+				33CE3E5119EAE01D000588C9 /* TalkToMeTests */,
 				33CE3E3A19EAE01D000588C9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,17 +74,18 @@
 		33CE3E3A19EAE01D000588C9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				33CE3E3919EAE01D000588C9 /* ReMote.app */,
-				33CE3E4E19EAE01D000588C9 /* ReMoteTests.xctest */,
+				33CE3E3919EAE01D000588C9 /* TalkToMe.app */,
+				33CE3E4E19EAE01D000588C9 /* TalkToMeTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		33CE3E3B19EAE01D000588C9 /* ReMote */ = {
+		33CE3E3B19EAE01D000588C9 /* TalkToMe */ = {
 			isa = PBXGroup;
 			children = (
 				33CE3E3E19EAE01D000588C9 /* AppDelegate.swift */,
 				33CE3E4019EAE01D000588C9 /* ViewController.swift */,
+				3340F5C419EC185000293CA4 /* talktomeServer.py */,
 				33F72C3019EB055500F2B124 /* ChatCellView.swift */,
 				33CE3E4219EAE01D000588C9 /* Main.storyboard */,
 				33D4139219EB17EB00C4F09A /* TitleViewController.swift */,
@@ -90,6 +93,7 @@
 				33CE3E4719EAE01D000588C9 /* LaunchScreen.xib */,
 				33CE3E3C19EAE01D000588C9 /* Supporting Files */,
 			);
+			name = TalkToMe;
 			path = ReMote;
 			sourceTree = "<group>";
 		};
@@ -101,12 +105,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		33CE3E5119EAE01D000588C9 /* ReMoteTests */ = {
+		33CE3E5119EAE01D000588C9 /* TalkToMeTests */ = {
 			isa = PBXGroup;
 			children = (
 				33CE3E5419EAE01D000588C9 /* ReMoteTests.swift */,
 				33CE3E5219EAE01D000588C9 /* Supporting Files */,
 			);
+			name = TalkToMeTests;
 			path = ReMoteTests;
 			sourceTree = "<group>";
 		};
@@ -121,9 +126,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		33CE3E3819EAE01C000588C9 /* ReMote */ = {
+		33CE3E3819EAE01C000588C9 /* TalkToMe */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 33CE3E5819EAE01D000588C9 /* Build configuration list for PBXNativeTarget "ReMote" */;
+			buildConfigurationList = 33CE3E5819EAE01D000588C9 /* Build configuration list for PBXNativeTarget "TalkToMe" */;
 			buildPhases = (
 				33CE3E3519EAE01C000588C9 /* Sources */,
 				33CE3E3619EAE01C000588C9 /* Frameworks */,
@@ -133,14 +138,14 @@
 			);
 			dependencies = (
 			);
-			name = ReMote;
+			name = TalkToMe;
 			productName = ReMote;
-			productReference = 33CE3E3919EAE01D000588C9 /* ReMote.app */;
+			productReference = 33CE3E3919EAE01D000588C9 /* TalkToMe.app */;
 			productType = "com.apple.product-type.application";
 		};
-		33CE3E4D19EAE01D000588C9 /* ReMoteTests */ = {
+		33CE3E4D19EAE01D000588C9 /* TalkToMeTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 33CE3E5B19EAE01D000588C9 /* Build configuration list for PBXNativeTarget "ReMoteTests" */;
+			buildConfigurationList = 33CE3E5B19EAE01D000588C9 /* Build configuration list for PBXNativeTarget "TalkToMeTests" */;
 			buildPhases = (
 				33CE3E4A19EAE01D000588C9 /* Sources */,
 				33CE3E4B19EAE01D000588C9 /* Frameworks */,
@@ -151,9 +156,9 @@
 			dependencies = (
 				33CE3E5019EAE01D000588C9 /* PBXTargetDependency */,
 			);
-			name = ReMoteTests;
+			name = TalkToMeTests;
 			productName = ReMoteTests;
-			productReference = 33CE3E4E19EAE01D000588C9 /* ReMoteTests.xctest */;
+			productReference = 33CE3E4E19EAE01D000588C9 /* TalkToMeTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -174,7 +179,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 33CE3E3419EAE01C000588C9 /* Build configuration list for PBXProject "ReMote" */;
+			buildConfigurationList = 33CE3E3419EAE01C000588C9 /* Build configuration list for PBXProject "TalkToMe" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -187,8 +192,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				33CE3E3819EAE01C000588C9 /* ReMote */,
-				33CE3E4D19EAE01D000588C9 /* ReMoteTests */,
+				33CE3E3819EAE01C000588C9 /* TalkToMe */,
+				33CE3E4D19EAE01D000588C9 /* TalkToMeTests */,
 			);
 		};
 /* End PBXProject section */
@@ -198,6 +203,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3340F5C519EC185000293CA4 /* talktomeServer.py in Resources */,
 				33CE3E4419EAE01D000588C9 /* Main.storyboard in Resources */,
 				33CE3E4919EAE01D000588C9 /* LaunchScreen.xib in Resources */,
 				33CE3E4619EAE01D000588C9 /* Images.xcassets in Resources */,
@@ -238,7 +244,7 @@
 /* Begin PBXTargetDependency section */
 		33CE3E5019EAE01D000588C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 33CE3E3819EAE01C000588C9 /* ReMote */;
+			target = 33CE3E3819EAE01C000588C9 /* TalkToMe */;
 			targetProxy = 33CE3E4F19EAE01D000588C9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -346,7 +352,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ReMote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TalkToMe;
 			};
 			name = Debug;
 		};
@@ -356,7 +362,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ReMote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TalkToMe;
 			};
 			name = Release;
 		};
@@ -374,7 +380,7 @@
 				);
 				INFOPLIST_FILE = ReMoteTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TalkToMeTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReMote.app/ReMote";
 			};
 			name = Debug;
@@ -389,7 +395,7 @@
 				);
 				INFOPLIST_FILE = ReMoteTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = TalkToMeTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReMote.app/ReMote";
 			};
 			name = Release;
@@ -397,7 +403,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		33CE3E3419EAE01C000588C9 /* Build configuration list for PBXProject "ReMote" */ = {
+		33CE3E3419EAE01C000588C9 /* Build configuration list for PBXProject "TalkToMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33CE3E5619EAE01D000588C9 /* Debug */,
@@ -406,7 +412,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		33CE3E5819EAE01D000588C9 /* Build configuration list for PBXNativeTarget "ReMote" */ = {
+		33CE3E5819EAE01D000588C9 /* Build configuration list for PBXNativeTarget "TalkToMe" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33CE3E5919EAE01D000588C9 /* Debug */,
@@ -415,7 +421,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		33CE3E5B19EAE01D000588C9 /* Build configuration list for PBXNativeTarget "ReMoteTests" */ = {
+		33CE3E5B19EAE01D000588C9 /* Build configuration list for PBXNativeTarget "TalkToMeTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33CE3E5C19EAE01D000588C9 /* Debug */,

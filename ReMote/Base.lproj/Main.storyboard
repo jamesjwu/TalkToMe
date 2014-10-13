@@ -8,7 +8,7 @@
         <!--Title-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ReMote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TalkToMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="MgU-KY-6Bt"/>
                         <viewControllerLayoutGuide type="bottom" id="gWk-wh-Ty9"/>
@@ -37,7 +37,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="3KF-fj-om1" kind="custom" id="OvV-eJ-BMM"/>
+                                    <segue destination="3KF-fj-om1" kind="custom" identifier="BackToConnection" id="OvV-eJ-BMM"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMg-Sp-IJP">
@@ -88,7 +88,7 @@
         <!--Title View Controller-->
         <scene sceneID="iWc-Ue-8cb">
             <objects>
-                <viewController id="3KF-fj-om1" customClass="TitleViewController" customModule="ReMote" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3KF-fj-om1" customClass="TitleViewController" customModule="TalkToMe" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="qIK-ar-TH9"/>
                         <viewControllerLayoutGuide type="bottom" id="7FV-zh-HlU"/>
@@ -108,7 +108,7 @@
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="custom" id="biZ-op-X8y"/>
+                                    <segue destination="vXZ-lx-hvc" kind="custom" identifier="ConnectToServer" id="biZ-op-X8y"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TalkToMe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rff-Ql-PHi">
@@ -125,22 +125,40 @@
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Server error." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="775-1s-F85">
+                                <rect key="frame" x="1" y="182" width="318" height="21"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.047118742970000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Type in a username!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaQ-3I-9cy">
+                                <rect key="frame" x="0.0" y="181" width="318" height="22"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
+                                <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.45720094319999999" green="0.61994069519999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="2FP-ht-nwB" firstAttribute="centerX" secondItem="xtI-jM-uNS" secondAttribute="centerX" id="0wq-6t-Xyt"/>
+                            <constraint firstItem="h6D-00-cqL" firstAttribute="top" secondItem="775-1s-F85" secondAttribute="bottom" constant="8" id="6ns-ZN-oJe"/>
                             <constraint firstItem="h6D-00-cqL" firstAttribute="top" secondItem="rff-Ql-PHi" secondAttribute="bottom" constant="53" id="7lS-HX-Kfq"/>
                             <constraint firstItem="7FV-zh-HlU" firstAttribute="top" secondItem="2FP-ht-nwB" secondAttribute="bottom" constant="205" id="A6J-nn-YSI"/>
                             <constraint firstItem="2FP-ht-nwB" firstAttribute="leading" secondItem="xtI-jM-uNS" secondAttribute="leadingMargin" constant="90" id="AaC-hV-m3V"/>
                             <constraint firstItem="2FP-ht-nwB" firstAttribute="top" secondItem="h6D-00-cqL" secondAttribute="bottom" constant="76" id="BCf-09-6As"/>
                             <constraint firstItem="rff-Ql-PHi" firstAttribute="leading" secondItem="xtI-jM-uNS" secondAttribute="leadingMargin" constant="28" id="CvB-Sb-ANo"/>
                             <constraint firstItem="h6D-00-cqL" firstAttribute="leading" secondItem="xtI-jM-uNS" secondAttribute="leadingMargin" constant="51" id="Eyf-nT-bOr"/>
+                            <constraint firstItem="h6D-00-cqL" firstAttribute="top" secondItem="MaQ-3I-9cy" secondAttribute="bottom" constant="8" id="LPR-no-aeR"/>
                             <constraint firstItem="rff-Ql-PHi" firstAttribute="centerX" secondItem="h6D-00-cqL" secondAttribute="centerX" id="coQ-NN-fZs"/>
+                            <constraint firstItem="h6D-00-cqL" firstAttribute="centerX" secondItem="775-1s-F85" secondAttribute="centerX" id="kzs-zB-yU9"/>
                             <constraint firstItem="rff-Ql-PHi" firstAttribute="top" secondItem="qIK-ar-TH9" secondAttribute="bottom" constant="32" id="oej-Qb-mHt"/>
+                            <constraint firstItem="h6D-00-cqL" firstAttribute="centerX" secondItem="MaQ-3I-9cy" secondAttribute="centerX" constant="1" id="tf6-4t-UDL"/>
                             <constraint firstItem="2FP-ht-nwB" firstAttribute="centerX" secondItem="h6D-00-cqL" secondAttribute="centerX" id="zHj-ty-dtG"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ServerClosedLabel" destination="775-1s-F85" id="j7E-Aa-VjP"/>
+                        <outlet property="TypeInUsername" destination="MaQ-3I-9cy" id="3vX-HA-WP8"/>
                         <outlet property="username" destination="h6D-00-cqL" id="1Gx-dh-4aZ"/>
                     </connections>
                 </viewController>
