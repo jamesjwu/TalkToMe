@@ -4,7 +4,7 @@ TalkToMe
 Twisted messaging server + iOS 8 client in swift
 
 To run the server, just run 
-`bash
+`
 python talkToMeServer.py
 `
 
