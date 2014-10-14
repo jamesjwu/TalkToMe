@@ -15,7 +15,6 @@
 		33CE3E4919EAE01D000588C9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33CE3E4719EAE01D000588C9 /* LaunchScreen.xib */; };
 		33CE3E5519EAE01D000588C9 /* ReMoteTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CE3E5419EAE01D000588C9 /* ReMoteTests.swift */; };
 		33D4139319EB17EB00C4F09A /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33D4139219EB17EB00C4F09A /* TitleViewController.swift */; };
-		33F72C3119EB055500F2B124 /* ChatCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33F72C3019EB055500F2B124 /* ChatCellView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +40,6 @@
 		33CE3E5319EAE01D000588C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33CE3E5419EAE01D000588C9 /* ReMoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReMoteTests.swift; sourceTree = "<group>"; };
 		33D4139219EB17EB00C4F09A /* TitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
-		33F72C3019EB055500F2B124 /* ChatCellView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ChatCellView.swift; path = ../ChatCellView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,7 +84,6 @@
 				33CE3E3E19EAE01D000588C9 /* AppDelegate.swift */,
 				33CE3E4019EAE01D000588C9 /* ViewController.swift */,
 				3340F5C419EC185000293CA4 /* talktomeServer.py */,
-				33F72C3019EB055500F2B124 /* ChatCellView.swift */,
 				33CE3E4219EAE01D000588C9 /* Main.storyboard */,
 				33D4139219EB17EB00C4F09A /* TitleViewController.swift */,
 				33CE3E4519EAE01D000588C9 /* Images.xcassets */,
@@ -224,7 +221,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				33F72C3119EB055500F2B124 /* ChatCellView.swift in Sources */,
 				33D4139319EB17EB00C4F09A /* TitleViewController.swift in Sources */,
 				33CE3E4119EAE01D000588C9 /* ViewController.swift in Sources */,
 				33CE3E3F19EAE01D000588C9 /* AppDelegate.swift in Sources */,
