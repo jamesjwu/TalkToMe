@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3340F5C519EC185000293CA4 /* talktomeServer.py in Resources */ = {isa = PBXBuildFile; fileRef = 3340F5C419EC185000293CA4 /* talktomeServer.py */; };
+		334386781A1F9FAE00348F4A /* NewServerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 334386771A1F9FAE00348F4A /* NewServerViewController.swift */; };
+		33BC34C81A1EFB590000A31E /* ChatTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BC34C71A1EFB590000A31E /* ChatTableViewController.swift */; };
+		33BC34CA1A1EFCB80000A31E /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33BC34C91A1EFCB80000A31E /* ChatTableViewCell.swift */; };
 		33CE3E3F19EAE01D000588C9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CE3E3E19EAE01D000588C9 /* AppDelegate.swift */; };
 		33CE3E4119EAE01D000588C9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33CE3E4019EAE01D000588C9 /* ViewController.swift */; };
 		33CE3E4419EAE01D000588C9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 33CE3E4219EAE01D000588C9 /* Main.storyboard */; };
@@ -29,14 +32,17 @@
 
 /* Begin PBXFileReference section */
 		3340F5C419EC185000293CA4 /* talktomeServer.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = talktomeServer.py; sourceTree = "<group>"; };
-		33CE3E3919EAE01D000588C9 /* TalkToMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TalkToMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		334386771A1F9FAE00348F4A /* NewServerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewServerViewController.swift; sourceTree = "<group>"; };
+		33BC34C71A1EFB590000A31E /* ChatTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewController.swift; sourceTree = "<group>"; };
+		33BC34C91A1EFCB80000A31E /* ChatTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		33CE3E3919EAE01D000588C9 /* ReMote.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReMote.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CE3E3D19EAE01D000588C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33CE3E3E19EAE01D000588C9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		33CE3E4019EAE01D000588C9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		33CE3E4319EAE01D000588C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		33CE3E4519EAE01D000588C9 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		33CE3E4819EAE01D000588C9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		33CE3E4E19EAE01D000588C9 /* TalkToMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TalkToMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		33CE3E4E19EAE01D000588C9 /* ReMoteTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReMoteTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33CE3E5319EAE01D000588C9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		33CE3E5419EAE01D000588C9 /* ReMoteTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReMoteTests.swift; sourceTree = "<group>"; };
 		33D4139219EB17EB00C4F09A /* TitleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
@@ -72,8 +78,8 @@
 		33CE3E3A19EAE01D000588C9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				33CE3E3919EAE01D000588C9 /* TalkToMe.app */,
-				33CE3E4E19EAE01D000588C9 /* TalkToMeTests.xctest */,
+				33CE3E3919EAE01D000588C9 /* ReMote.app */,
+				33CE3E4E19EAE01D000588C9 /* ReMoteTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -82,9 +88,12 @@
 			isa = PBXGroup;
 			children = (
 				33CE3E3E19EAE01D000588C9 /* AppDelegate.swift */,
+				334386771A1F9FAE00348F4A /* NewServerViewController.swift */,
 				33CE3E4019EAE01D000588C9 /* ViewController.swift */,
+				33BC34C71A1EFB590000A31E /* ChatTableViewController.swift */,
 				3340F5C419EC185000293CA4 /* talktomeServer.py */,
 				33CE3E4219EAE01D000588C9 /* Main.storyboard */,
+				33BC34C91A1EFCB80000A31E /* ChatTableViewCell.swift */,
 				33D4139219EB17EB00C4F09A /* TitleViewController.swift */,
 				33CE3E4519EAE01D000588C9 /* Images.xcassets */,
 				33CE3E4719EAE01D000588C9 /* LaunchScreen.xib */,
@@ -123,9 +132,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		33CE3E3819EAE01C000588C9 /* TalkToMe */ = {
+		33CE3E3819EAE01C000588C9 /* ReMote */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 33CE3E5819EAE01D000588C9 /* Build configuration list for PBXNativeTarget "TalkToMe" */;
+			buildConfigurationList = 33CE3E5819EAE01D000588C9 /* Build configuration list for PBXNativeTarget "ReMote" */;
 			buildPhases = (
 				33CE3E3519EAE01C000588C9 /* Sources */,
 				33CE3E3619EAE01C000588C9 /* Frameworks */,
@@ -135,14 +144,14 @@
 			);
 			dependencies = (
 			);
-			name = TalkToMe;
+			name = ReMote;
 			productName = ReMote;
-			productReference = 33CE3E3919EAE01D000588C9 /* TalkToMe.app */;
+			productReference = 33CE3E3919EAE01D000588C9 /* ReMote.app */;
 			productType = "com.apple.product-type.application";
 		};
-		33CE3E4D19EAE01D000588C9 /* TalkToMeTests */ = {
+		33CE3E4D19EAE01D000588C9 /* ReMoteTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 33CE3E5B19EAE01D000588C9 /* Build configuration list for PBXNativeTarget "TalkToMeTests" */;
+			buildConfigurationList = 33CE3E5B19EAE01D000588C9 /* Build configuration list for PBXNativeTarget "ReMoteTests" */;
 			buildPhases = (
 				33CE3E4A19EAE01D000588C9 /* Sources */,
 				33CE3E4B19EAE01D000588C9 /* Frameworks */,
@@ -153,9 +162,9 @@
 			dependencies = (
 				33CE3E5019EAE01D000588C9 /* PBXTargetDependency */,
 			);
-			name = TalkToMeTests;
+			name = ReMoteTests;
 			productName = ReMoteTests;
-			productReference = 33CE3E4E19EAE01D000588C9 /* TalkToMeTests.xctest */;
+			productReference = 33CE3E4E19EAE01D000588C9 /* ReMoteTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -176,7 +185,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 33CE3E3419EAE01C000588C9 /* Build configuration list for PBXProject "TalkToMe" */;
+			buildConfigurationList = 33CE3E3419EAE01C000588C9 /* Build configuration list for PBXProject "ReMote" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -189,8 +198,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				33CE3E3819EAE01C000588C9 /* TalkToMe */,
-				33CE3E4D19EAE01D000588C9 /* TalkToMeTests */,
+				33CE3E3819EAE01C000588C9 /* ReMote */,
+				33CE3E4D19EAE01D000588C9 /* ReMoteTests */,
 			);
 		};
 /* End PBXProject section */
@@ -224,6 +233,9 @@
 				33D4139319EB17EB00C4F09A /* TitleViewController.swift in Sources */,
 				33CE3E4119EAE01D000588C9 /* ViewController.swift in Sources */,
 				33CE3E3F19EAE01D000588C9 /* AppDelegate.swift in Sources */,
+				33BC34CA1A1EFCB80000A31E /* ChatTableViewCell.swift in Sources */,
+				334386781A1F9FAE00348F4A /* NewServerViewController.swift in Sources */,
+				33BC34C81A1EFB590000A31E /* ChatTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,7 +252,7 @@
 /* Begin PBXTargetDependency section */
 		33CE3E5019EAE01D000588C9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 33CE3E3819EAE01C000588C9 /* TalkToMe */;
+			target = 33CE3E3819EAE01C000588C9 /* ReMote */;
 			targetProxy = 33CE3E4F19EAE01D000588C9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -348,7 +360,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ReMote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = TalkToMe;
+				PRODUCT_NAME = ReMote;
 			};
 			name = Debug;
 		};
@@ -358,7 +370,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ReMote/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_NAME = TalkToMe;
+				PRODUCT_NAME = ReMote;
 			};
 			name = Release;
 		};
@@ -376,7 +388,7 @@
 				);
 				INFOPLIST_FILE = ReMoteTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = TalkToMeTests;
+				PRODUCT_NAME = ReMoteTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReMote.app/ReMote";
 			};
 			name = Debug;
@@ -391,7 +403,7 @@
 				);
 				INFOPLIST_FILE = ReMoteTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = TalkToMeTests;
+				PRODUCT_NAME = ReMoteTests;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReMote.app/ReMote";
 			};
 			name = Release;
@@ -399,7 +411,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		33CE3E3419EAE01C000588C9 /* Build configuration list for PBXProject "TalkToMe" */ = {
+		33CE3E3419EAE01C000588C9 /* Build configuration list for PBXProject "ReMote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33CE3E5619EAE01D000588C9 /* Debug */,
@@ -408,7 +420,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		33CE3E5819EAE01D000588C9 /* Build configuration list for PBXNativeTarget "TalkToMe" */ = {
+		33CE3E5819EAE01D000588C9 /* Build configuration list for PBXNativeTarget "ReMote" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33CE3E5919EAE01D000588C9 /* Debug */,
@@ -417,7 +429,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		33CE3E5B19EAE01D000588C9 /* Build configuration list for PBXNativeTarget "TalkToMeTests" */ = {
+		33CE3E5B19EAE01D000588C9 /* Build configuration list for PBXNativeTarget "ReMoteTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				33CE3E5C19EAE01D000588C9 /* Debug */,

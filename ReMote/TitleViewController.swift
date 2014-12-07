@@ -17,9 +17,12 @@ class TitleViewController : UIViewController {
   
   @IBOutlet var TypeInUsername: UILabel!
   
+  
+  var serverPort = 0
+  var hostname = ""
   var hideServer = true
-  override func shouldPerformSegueWithIdentifier(identifier: String, sender: AnyObject?) -> Bool {
-    if(identifier == "ConnectToServer") {
+  override func shouldPerformSegueWithIdentifier(identifier: String?, sender: AnyObject?) -> Bool {
+  if(identifier == "ConnectToServer") {
       if self.username == nil {
         return false
       }
@@ -36,7 +39,8 @@ class TitleViewController : UIViewController {
   override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     var dest = segue.destinationViewController as ViewController
     dest.username = self.username.text
-    dest.connect()
+    dest.connect(UInt32(self.serverPort), serverAddress: self.hostname)
+    
     self.TypeInUsername.hidden = true
     self.hideServer = true
   }

@@ -17,9 +17,9 @@ class ViewController: UIViewController, NSStreamDelegate, UITextViewDelegate
   }
   
   //change the server Address to actual address if deploying
-  let serverAddress: CFString = "localhost"
+
   // arbitrary server port
-  let serverPort: UInt32 = 1112
+
   var input : NSInputStream?
   var output : NSOutputStream?
   var messages : NSMutableString = ""
@@ -36,12 +36,14 @@ class ViewController: UIViewController, NSStreamDelegate, UITextViewDelegate
   
 
   
-  func connect() {
+  func connect(serverPort: UInt32, serverAddress: CFString) {
+    println(serverPort)
+    println(serverAddress)
     var readStream:  Unmanaged<CFReadStream>?
     var writeStream: Unmanaged<CFWriteStream>?
     
     //connect to the host
-    CFStreamCreatePairWithSocketToHost(nil, self.serverAddress, self.serverPort, &readStream, &writeStream)
+    CFStreamCreatePairWithSocketToHost(nil, serverAddress, serverPort, &readStream, &writeStream)
     
     self.input = readStream!.takeRetainedValue()
     self.output = writeStream!.takeRetainedValue()
@@ -81,10 +83,8 @@ class ViewController: UIViewController, NSStreamDelegate, UITextViewDelegate
           let bytesRead = self.input!.read(&buffer, maxLength: bufferSize)
           if bytesRead >= 0 {
             var output = NSString(bytes: &buffer, length: bytesRead, encoding: NSUTF8StringEncoding)
-            self.messages.appendString(output)
+            self.messages.appendString(output!)
             self.messageText.text = self.messages
-            
-            
           }
         }
       }
@@ -99,7 +99,7 @@ class ViewController: UIViewController, NSStreamDelegate, UITextViewDelegate
     
     case NSStreamEvent.EndEncountered:
       self.serverHadError = true
-      performSegueWithIdentifier("BackToConnection", sender: self)
+      self.navigationController?.popViewControllerAnimated(true)
       
       break
     
@@ -111,12 +111,18 @@ class ViewController: UIViewController, NSStreamDelegate, UITextViewDelegate
   }
   override func viewDidAppear(animated: Bool) {
     if(self.serverHadError) {
-      performSegueWithIdentifier("BackToConnection", sender: self)
+      self.navigationController!.popViewControllerAnimated(true)
+      
     }
     
   
   }
   
+  override func viewWillDisappear(animated: Bool) {
+    self.input!.close()
+    self.output!.close()
+
+  }
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
@@ -132,18 +138,6 @@ class ViewController: UIViewController, NSStreamDelegate, UITextViewDelegate
     super.didReceiveMemoryWarning()
     // Dispose of any resources that can be recreated.
   }
-  
-  
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    var dest = segue.destinationViewController as TitleViewController
-    
-    dest.hideServer = !self.serverHadError
-    
-    self.input!.close()
-    self.output!.close()
-  }
-  
-  
 
 
   @IBAction func sendMessage(sender: AnyObject) {

@@ -1,47 +1,26 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="14A379b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="3KF-fj-om1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A388b" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="rby-Yx-1wb">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
     </dependencies>
     <scenes>
-        <!--Title-->
+        <!--TalkToMe-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="TalkToMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="MgU-KY-6Bt"/>
-                        <viewControllerLayoutGuide type="bottom" id="gWk-wh-Ty9"/>
-                    </layoutGuides>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="ReMote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your message" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P2j-3Z-NL0">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your message" minimumFontSize="17" id="P2j-3Z-NL0">
                                 <rect key="frame" x="8" y="76" width="235" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="dLk-YK-F6Y"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="TalkToMe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s51-jg-cKe">
-                                <rect key="frame" x="44" y="24" width="233" height="44"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="40"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbs-VV-W2c">
-                                <rect key="frame" x="16" y="38" width="35" height="30"/>
-                                <state key="normal" title="Back">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <segue destination="3KF-fj-om1" kind="custom" identifier="BackToConnection" id="OvV-eJ-BMM"/>
-                                </connections>
-                            </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LMg-Sp-IJP">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="LMg-Sp-IJP">
                                 <rect key="frame" x="8" y="114" width="304" height="440"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.48863981815261015" green="0.79570080774731833" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -49,8 +28,9 @@
                                     <outlet property="delegate" destination="vXZ-lx-hvc" id="TD3-OO-0u6"/>
                                 </connections>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RCd-bg-YnF">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="RCd-bg-YnF">
                                 <rect key="frame" x="251" y="81" width="61" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
                                 <state key="normal" title="Talk!">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -61,21 +41,10 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.45720094319999999" green="0.61994069519999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="LMg-Sp-IJP" firstAttribute="trailing" secondItem="RCd-bg-YnF" secondAttribute="trailing" id="3Tp-tb-wtk"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RCd-bg-YnF" secondAttribute="trailing" constant="-8" id="9QT-45-Ukf"/>
-                            <constraint firstItem="P2j-3Z-NL0" firstAttribute="centerY" secondItem="RCd-bg-YnF" secondAttribute="centerY" constant="-2.5" id="9XK-mg-TVu"/>
-                            <constraint firstItem="LMg-Sp-IJP" firstAttribute="leading" secondItem="P2j-3Z-NL0" secondAttribute="leading" id="Bzw-IY-EVZ"/>
-                            <constraint firstAttribute="centerY" secondItem="LMg-Sp-IJP" secondAttribute="centerY" constant="-57" id="Daa-wO-0uT"/>
-                            <constraint firstItem="RCd-bg-YnF" firstAttribute="leading" secondItem="P2j-3Z-NL0" secondAttribute="trailing" constant="8" id="Nit-qT-jb3"/>
-                            <constraint firstAttribute="centerX" secondItem="LMg-Sp-IJP" secondAttribute="centerX" id="QAk-fH-4HF"/>
-                            <constraint firstItem="gbs-VV-W2c" firstAttribute="top" secondItem="MgU-KY-6Bt" secondAttribute="bottom" constant="18" id="Sd9-zC-aTC"/>
-                            <constraint firstItem="LMg-Sp-IJP" firstAttribute="top" secondItem="P2j-3Z-NL0" secondAttribute="bottom" constant="8" id="Utj-lI-183"/>
-                            <constraint firstItem="gbs-VV-W2c" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" id="afV-Em-Qwr"/>
-                            <constraint firstAttribute="centerX" secondItem="s51-jg-cKe" secondAttribute="centerX" constant="-0.5" id="l1s-Ef-yet"/>
-                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Odw-Ji-qUd"/>
+                    <navigationItem key="navigationItem" title="TalkToMe" id="Odw-Ji-qUd">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="Xmo-l7-WWs"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="message" destination="P2j-3Z-NL0" id="8sd-9q-P6l"/>
                         <outlet property="messageText" destination="LMg-Sp-IJP" id="T9w-Mu-9e0"/>
@@ -83,79 +52,208 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="476" y="345"/>
+            <point key="canvasLocation" x="869" y="567"/>
         </scene>
-        <!--Title View Controller-->
+        <!--New Server-->
+        <scene sceneID="QGI-AH-Lre">
+            <objects>
+                <viewController id="YOr-1N-Mkd" customClass="NewServerViewController" customModule="ReMote" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yBp-Z9-InK">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="IBj-N4-uqD">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Hostname" minimumFontSize="17" id="NUo-2q-QZ6">
+                                        <rect key="frame" x="60" y="193" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Port" minimumFontSize="17" id="0gh-LG-3iM">
+                                        <rect key="frame" x="174" y="194" width="97" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Description" minimumFontSize="17" id="RcV-9d-P5n">
+                                        <rect key="frame" x="60" y="127" width="211" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.38823529410000002" green="0.53333333329999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dTz-KO-0yC">
+                                <rect key="frame" x="74" y="269" width="173" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
+                                <state key="normal" title="Talk To Them!">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="ServerAdded:" destination="YOr-1N-Mkd" eventType="touchUpInside" id="zbX-OD-GtH"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="New Server" id="VaZ-om-MtF"/>
+                    <connections>
+                        <outlet property="Description" destination="RcV-9d-P5n" id="iAh-hc-DBf"/>
+                        <outlet property="hostLabel" destination="NUo-2q-QZ6" id="L7K-oL-OiF"/>
+                        <outlet property="portLabel" destination="0gh-LG-3iM" id="YaM-n9-tVk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PgP-qA-Xtv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="85" y="-73"/>
+        </scene>
+        <!--TalkToMe Servers-->
+        <scene sceneID="IVS-Xc-w7H">
+            <objects>
+                <tableViewController id="q2g-eV-4bw" customClass="ChatTableViewController" customModule="ReMote" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="RsF-ly-xfM">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexBackgroundColor" red="0.45720094319999999" green="0.61994069519999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.31764705879999999" green="0.43137254899999999" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="server" id="Y0B-al-rsA" customClass="ChatTableViewCell" customModule="ReMote" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Y0B-al-rsA" id="8oE-Yv-xcs">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hostname" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5Fw-jo-fnl">
+                                            <rect key="frame" x="168" y="3" width="103" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="sag-lF-GQ2">
+                                            <rect key="frame" x="27" y="12" width="133" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Port" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="P6x-s0-MKH">
+                                            <rect key="frame" x="168" y="22" width="103" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.48863981820000002" green="0.79570080769999996" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="hostLabel" destination="5Fw-jo-fnl" id="pES-8W-unY"/>
+                                    <outlet property="portLabel" destination="P6x-s0-MKH" id="EqD-2O-BSf"/>
+                                    <outlet property="titleLabel" destination="sag-lF-GQ2" id="xxe-1u-fut"/>
+                                    <segue destination="3KF-fj-om1" kind="push" identifier="server" id="oF9-7k-2yj"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="q2g-eV-4bw" id="wQa-T2-Cxm"/>
+                            <outlet property="delegate" destination="q2g-eV-4bw" id="UxS-N4-wB6"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="TalkToMe Servers" id="lu7-1q-eO2">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="yBi-vd-Q7g">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="d7K-8A-sbT">
+                                <rect key="frame" x="233" y="-2" width="71" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="+">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="YOr-1N-Mkd" kind="push" identifier="add" id="OaW-tB-cIl"/>
+                                </connections>
+                            </button>
+                            <color key="tintColor" red="0.45720094319999999" green="0.61994069519999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oxB-7m-adF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-205" y="504"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="y0R-er-ayV">
+            <objects>
+                <navigationController id="rby-Yx-1wb" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dEr-rL-CCh">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="q2g-eV-4bw" kind="relationship" relationship="rootViewController" id="nYI-8o-8ds"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e0e-OX-ABc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-521" y="471"/>
+        </scene>
+        <!--Connect To Server-->
         <scene sceneID="iWc-Ue-8cb">
             <objects>
-                <viewController id="3KF-fj-om1" customClass="TitleViewController" customModule="TalkToMe" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="qIK-ar-TH9"/>
-                        <viewControllerLayoutGuide type="bottom" id="7FV-zh-HlU"/>
-                    </layoutGuides>
+                <viewController id="3KF-fj-om1" customClass="TitleViewController" customModule="ReMote" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xtI-jM-uNS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2FP-ht-nwB">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="2FP-ht-nwB">
                                 <rect key="frame" x="106" y="317" width="108" height="46"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="46" id="F21-zP-SwG"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="26"/>
                                 <state key="normal" title="Connect">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vXZ-lx-hvc" kind="custom" identifier="ConnectToServer" id="biZ-op-X8y"/>
+                                    <segue destination="vXZ-lx-hvc" kind="push" identifier="ConnectToServer" id="biZ-op-X8y"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TalkToMe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rff-Ql-PHi">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TalkToMe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rff-Ql-PHi">
                                 <rect key="frame" x="44" y="52" width="233" height="106"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="61"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name?" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="h6D-00-cqL">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name?" adjustsFontSizeToFit="NO" minimumFontSize="17" id="h6D-00-cqL">
                                 <rect key="frame" x="67" y="211" width="186" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="uH5-Cy-GoU"/>
-                                </constraints>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="15"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Server error." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="775-1s-F85">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Server error." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="775-1s-F85">
                                 <rect key="frame" x="1" y="182" width="318" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                 <color key="textColor" red="1" green="0.0" blue="0.047118742970000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Type in a username!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MaQ-3I-9cy">
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type in a username!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MaQ-3I-9cy">
                                 <rect key="frame" x="0.0" y="181" width="318" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="20"/>
                                 <color key="textColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.45720094319999999" green="0.61994069519999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="2FP-ht-nwB" firstAttribute="centerX" secondItem="xtI-jM-uNS" secondAttribute="centerX" id="0wq-6t-Xyt"/>
-                            <constraint firstItem="h6D-00-cqL" firstAttribute="top" secondItem="775-1s-F85" secondAttribute="bottom" constant="8" id="6ns-ZN-oJe"/>
-                            <constraint firstItem="h6D-00-cqL" firstAttribute="top" secondItem="rff-Ql-PHi" secondAttribute="bottom" constant="53" id="7lS-HX-Kfq"/>
-                            <constraint firstItem="7FV-zh-HlU" firstAttribute="top" secondItem="2FP-ht-nwB" secondAttribute="bottom" constant="205" id="A6J-nn-YSI"/>
-                            <constraint firstItem="2FP-ht-nwB" firstAttribute="leading" secondItem="xtI-jM-uNS" secondAttribute="leadingMargin" constant="90" id="AaC-hV-m3V"/>
-                            <constraint firstItem="2FP-ht-nwB" firstAttribute="top" secondItem="h6D-00-cqL" secondAttribute="bottom" constant="76" id="BCf-09-6As"/>
-                            <constraint firstItem="rff-Ql-PHi" firstAttribute="leading" secondItem="xtI-jM-uNS" secondAttribute="leadingMargin" constant="28" id="CvB-Sb-ANo"/>
-                            <constraint firstItem="h6D-00-cqL" firstAttribute="leading" secondItem="xtI-jM-uNS" secondAttribute="leadingMargin" constant="51" id="Eyf-nT-bOr"/>
-                            <constraint firstItem="h6D-00-cqL" firstAttribute="top" secondItem="MaQ-3I-9cy" secondAttribute="bottom" constant="8" id="LPR-no-aeR"/>
-                            <constraint firstItem="rff-Ql-PHi" firstAttribute="centerX" secondItem="h6D-00-cqL" secondAttribute="centerX" id="coQ-NN-fZs"/>
-                            <constraint firstItem="h6D-00-cqL" firstAttribute="centerX" secondItem="775-1s-F85" secondAttribute="centerX" id="kzs-zB-yU9"/>
-                            <constraint firstItem="rff-Ql-PHi" firstAttribute="top" secondItem="qIK-ar-TH9" secondAttribute="bottom" constant="32" id="oej-Qb-mHt"/>
-                            <constraint firstItem="h6D-00-cqL" firstAttribute="centerX" secondItem="MaQ-3I-9cy" secondAttribute="centerX" constant="1" id="tf6-4t-UDL"/>
-                            <constraint firstItem="2FP-ht-nwB" firstAttribute="centerX" secondItem="h6D-00-cqL" secondAttribute="centerX" id="zHj-ty-dtG"/>
-                        </constraints>
+                        <color key="backgroundColor" red="0.3569739737704517" green="0.65474169376026758" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Connect To Server" id="p4A-Yb-oqN"/>
                     <connections>
                         <outlet property="ServerClosedLabel" destination="775-1s-F85" id="j7E-Aa-VjP"/>
                         <outlet property="TypeInUsername" destination="MaQ-3I-9cy" id="3vX-HA-WP8"/>
@@ -164,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WFY-bW-UAN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="130" y="345"/>
+            <point key="canvasLocation" x="223" y="488"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
